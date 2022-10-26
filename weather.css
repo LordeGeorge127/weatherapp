@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 162, 143));
+    font-family: sans-serif;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 120%;
+    /*background-image:;*/
+}
+
+.card {
+    background: #222;
+    color: white;
+    margin: 1em;
+    padding: 2em;
+    width: 100%;
+    border-radius: 30px;
+    max-width: 420px;
+}
+
+.search {
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    width: 42px;
+    height: 3.5em;
+    border: none;
+    border-radius: 30%;
+    margin: .5em;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+}
+input.search-bar {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: .4em 1em;
+    color: white;
+    background: #7c7c7c6b;
+    font-size: 100%;
+    font-family: inherit;
+    width: calc(100% - 80px);
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+h1.temp {
+    margin: 0;
+    margin-bottom: .5em;
+}
+.description {
+    text-transform: capitalize;
+    margin-left: 12px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading::after{
+    visibility: visible;
+    content: "Loading...";
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
